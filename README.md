@@ -65,7 +65,7 @@ AURA_Vision/
 │   └── utils/
 │       ├── image.py             # Image validation, decoding, Base64 conversion
 │       └── visualization.py     # Clean bounding box & pill label rendering
-├── models/                        # Place the four model checkpoints here (not tracked by Git)
+├── models/                        # Four required model checkpoints, stored with Git LFS
 ├── frontend/
 │   └── app.py                   # Streamlit dashboard with metadata inputs & multi-format exports
 ├── requirements.txt             # Python dependencies (including fpdf2)
@@ -83,7 +83,7 @@ AURA_Vision/
 | **Building** | `AURA_Vision_Building_Crack_YOLO11s.pt` | Image Classification | `Cracked`, `Non-cracked` | SDNET2018 (Walls) |
 | **Concrete** | `AURA_Vision_CONCORNET2023.pt` | Object Detection | `Corrosion` | CONCORNET2023 |
 
-Model checkpoint files are excluded from Git and are not included in a clone of this repository. Obtain the four `.pt` files separately and place them in the `models/` directory using the filenames shown above before running inference.
+The four model checkpoints are stored with Git LFS. Install and enable Git LFS before cloning so the model files are downloaded and available in `models/` for inference.
 
 > **Important Visualization Note:** For Road, Bridge, and Concrete, bounding boxes and confidence pills are rendered directly on the image. For Building Crack classification, the original image is returned untouched without artificial bounding boxes.
 
